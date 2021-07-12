@@ -1,11 +1,13 @@
 import React from "react";
+import styles from "./JobList.module.css";
+import Job from "../Job/Job";
 
-function JobList() {
+const JobList: React.FC = () => {
   return (
-    <div>
-      <span>hello</span>
+    <div className={styles.wrappedListDiv}>
+      <Job />
     </div>
   );
-}
+};
 
 export default JobList;

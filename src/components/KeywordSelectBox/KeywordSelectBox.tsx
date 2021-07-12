@@ -4,14 +4,13 @@ import { Typeahead } from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function KeywordSelectBox() {
+const KeywordSelectBox: React.FC = () => {
   const [selected, setSelected] = useState<string[]>([]);
   const searchOptions: string[] = ["Javascript", "HTML", "CSS"];
   return (
     <div className={styles.headerDiv}>
       <Typeahead
-        id="targetName"
-        className={"typeahead-custom"}
+        id="keywords"
         multiple
         onChange={setSelected}
         options={searchOptions}
@@ -20,6 +19,6 @@ function KeywordSelectBox() {
       />
     </div>
   );
-}
+};
 
 export default KeywordSelectBox;

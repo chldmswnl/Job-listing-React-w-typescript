@@ -1,0 +1,64 @@
+.wrappedJobDiv {
+  width: 70vw;
+  height: 130px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 1px #cccfcd;
+  background-color: white;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.companyDiv {
+  display: flex;
+}
+
+.companyInfo {
+  margin-left: 1.5rem;
+}
+
+.companyName {
+  color: #297d70;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.jobStatus {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: #297d70;
+  color: white;
+  border-radius: 30px;
+  padding: 0.4rem 0.8rem;
+}
+
+.jobTitle {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.jobInfo {
+  color: #969696;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.keyword {
+  background-color: #ddeff1;
+  color: #68b9ba;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.middleDot {
+  font-weight: bold;
+  color: #969696;
+}

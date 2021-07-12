@@ -3,7 +3,7 @@ import KeywordSelectBox from "../KeywordSelectBox/KeywordSelectBox";
 import styles from "./HeaderSection.module.css";
 import bgImg from "../../img/bg-header-desktop.svg";
 
-function HeaderSection() {
+const HeaderSection: React.FC = () => {
   return (
     <div
       className={styles.wrappedHeader}
@@ -12,6 +12,6 @@ function HeaderSection() {
       <KeywordSelectBox />
     </div>
   );
-}
+};
 
 export default HeaderSection;
