@@ -1,34 +1,74 @@
 import React from "react";
 import styles from "./Job.module.css";
-import logo from "../../img/photosnap.svg";
 
-const Job: React.FC = () => {
+type JobProps = {
+  item: {
+    company: string;
+    contract: string;
+    featured: boolean;
+    id: number;
+    languages: [];
+    level: string;
+    location: string;
+    logo: string;
+    isNew: boolean;
+    position: string;
+    postedAt: string;
+    role: string;
+    tools: [];
+    keywordList: [];
+  };
+};
+
+function Job({
+  item: {
+    company,
+    contract,
+    featured,
+    languages,
+    level,
+    location,
+    logo,
+    isNew,
+    position,
+    postedAt,
+    role,
+    tools,
+    keywordList,
+  },
+}: JobProps) {
   return (
     <div className={styles.wrappedJobDiv}>
       <div className={styles.companyDiv}>
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo"></img>
         <div className={styles.companyInfo}>
-          <div>
-            <span className={styles.companyName}>Company Name</span>
-            <span className={styles.jobStatus}>New!</span>
+          <div className={styles.infoSentence}>
+            <span className={styles.companyName}>{company}</span>
+            {isNew && <span className={styles.jobStatus}>NEW!</span>}
+            {featured && <span className={styles.featured}>FEATURED</span>}
           </div>
-          <span className={styles.jobTitle}>Job title</span>
+          <div className={styles.infoSentence}>
+            <span className={styles.jobTitle}>{position}</span>
+          </div>
+
           <div>
-            <span className={styles.jobInfo}>1d ago</span>
+            <span className={styles.jobInfo}>{postedAt}</span>
             <span className={styles.middleDot}>&#183; </span>
-            <span className={styles.jobInfo}>Full Time</span>
+            <span className={styles.jobInfo}>{contract}</span>
             <span className={styles.middleDot}>&#183; </span>
-            <span className={styles.jobInfo}>USA only</span>
+            <span className={styles.jobInfo}>{location}</span>
           </div>
         </div>
       </div>
       <div className={styles.keywordDiv}>
-        <span className={styles.keyword}>HTML</span>
-        <span className={styles.keyword}>CSS</span>
-        <span className={styles.keyword}>Javascript</span>
+        {keywordList.map((keyword) => (
+          <span className={styles.keyword} key={keyword}>
+            {keyword}
+          </span>
+        ))}
       </div>
     </div>
   );
-};
+}
 
 export default Job;

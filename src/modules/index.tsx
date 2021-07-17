@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import jobList from "./jobList";
+import keywordList from "./keywordList";
 
 const rootReducer = combineReducers({
-  jobList,
+  keywordList,
 });
 
 export default rootReducer;

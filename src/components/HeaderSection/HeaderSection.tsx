@@ -1,7 +1,7 @@
 import React from "react";
 import KeywordSelectBox from "../KeywordSelectBox/KeywordSelectBox";
 import styles from "./HeaderSection.module.css";
-import bgImg from "../../img/bg-header-desktop.svg";
+import bgImg from "../../images/bg-header-desktop.svg";
 
 const HeaderSection: React.FC = () => {
   return (

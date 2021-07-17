@@ -29,8 +29,18 @@
 .jobStatus {
   margin-left: 0.5rem;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   background-color: #297d70;
+  color: white;
+  border-radius: 30px;
+  padding: 0.4rem 0.8rem;
+}
+
+.featured {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 0.6rem;
+  background-color: black;
   color: white;
   border-radius: 30px;
   padding: 0.4rem 0.8rem;
@@ -61,4 +71,8 @@
 .middleDot {
   font-weight: bold;
   color: #969696;
+}
+
+.infoSentence {
+  margin-bottom: 0.5rem;
 }
