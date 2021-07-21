@@ -1,30 +1,17 @@
-const SETKEYWORD = "keywordList/SETKEYWORD" as const;
+import { createSlice } from "@reduxjs/toolkit";
+const INITIAL_STATE: string[] = [];
 
-export const setKeyword = (keyword: any) => ({
-  type: SETKEYWORD,
-  payload: keyword,
+export const keywordSlice = createSlice({
+  name: "keywordList",
+  initialState: INITIAL_STATE,
+  reducers: {
+    setKeyword(state, action) {
+      state = action.payload;
+      return state;
+    },
+  },
 });
 
-type keywordAction = ReturnType<typeof setKeyword>;
-
-type KeywordState = {
-  keywordList: any;
-};
-
-const initialState: KeywordState = {
-  keywordList: [],
-};
-
-function keywordList(
-  state: KeywordState = initialState,
-  action: keywordAction
-): KeywordState {
-  switch (action.type) {
-    case SETKEYWORD:
-      return { keywordList: action.payload };
-    default:
-      return state;
-  }
-}
-
-export default keywordList;
+const { actions, reducer } = keywordSlice;
+export const { setKeyword } = actions;
+export default reducer;

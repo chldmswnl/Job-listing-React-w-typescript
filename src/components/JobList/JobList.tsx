@@ -24,12 +24,10 @@ type JobItem = {
 };
 
 function JobList() {
-  const [jobListData, setJobListData] = useState<any>([]);
+  const [jobListData, setJobListData] = useState([]);
 
-  const selectedKeywordList = useSelector(
-    (state: RootState) => state.keywordList.keywordList
-  );
-
+  const selectedKeywordList = useSelector((state: RootState) => state.keyword);
+  console.log(selectedKeywordList);
   function makeListWithKeyword() {
     let tempList: any = [];
     JobData.map((job: any) => {
@@ -48,29 +46,28 @@ function JobList() {
     setJobListData(tempList);
   }
 
-  useEffect(() => {
-    console.log(selectedKeywordList);
-    makeListWithKeyword();
-    let tempList: any = [];
-    if (jobListData.length > 0 && selectedKeywordList.length > 0) {
-      jobListData.map((job: any) => {
-        let count: number = 0;
-        if (job.keywordList.length > 0) {
-          for (let i = 0; i < job.keywordList.length; i++) {
-            for (let j = 0; j < selectedKeywordList.length; j++) {
-              if (job.keywordList[i] === selectedKeywordList[j]) {
-                count++;
-              }
-            }
-          }
-          if (count === selectedKeywordList.length) {
-            tempList.push(job);
-          }
-        }
-      });
-      setJobListData(tempList);
-    }
-  }, [selectedKeywordList]);
+  // useEffect(() => {
+  //   makeListWithKeyword();
+  //   let tempList: any = [];
+  //   if (jobListData.length > 0 && selectedKeywordList.length > 0) {
+  //     jobListData.map((job: any) => {
+  //       let count: number = 0;
+  //       if (job.keywordList.length > 0) {
+  //         for (let i = 0; i < job.keywordList.length; i++) {
+  //           for (let j = 0; j < selectedKeywordList.length; j++) {
+  //             if (job.keywordList[i] === selectedKeywordList[j]) {
+  //               count++;
+  //             }
+  //           }
+  //         }
+  //         if (count === selectedKeywordList.length) {
+  //           tempList.push(job);
+  //         }
+  //       }
+  //     });
+  //     setJobListData(tempList);
+  //   }
+  // }, [selectedKeywordList]);
 
   useEffect(() => {
     makeListWithKeyword();

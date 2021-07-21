@@ -1,10 +1,11 @@
-import { combineReducers } from "redux";
-import keywordList from "./keywordList";
+import { configureStore } from "@reduxjs/toolkit";
+import keywordSlice from "./keywordList";
 
-const rootReducer = combineReducers({
-  keywordList,
+export const store = configureStore({
+  reducer: {
+    keyword: keywordSlice,
+  },
 });
 
-export default rootReducer;
-
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
