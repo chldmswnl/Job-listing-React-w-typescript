@@ -27,7 +27,7 @@ function JobList() {
   const [jobListData, setJobListData] = useState([]);
 
   const selectedKeywordList = useSelector((state: RootState) => state.keyword);
-  console.log(selectedKeywordList);
+
   function makeListWithKeyword() {
     let tempList: any = [];
     JobData.map((job: any) => {

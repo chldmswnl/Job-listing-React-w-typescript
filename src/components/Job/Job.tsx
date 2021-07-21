@@ -40,7 +40,7 @@ function Job({
   return (
     <div className={styles.wrappedJobDiv}>
       <div className={styles.companyDiv}>
-        <img src={logo} alt="logo"></img>
+        <img src={logo} alt="logo" className={styles.logoImg}></img>
         <div className={styles.companyInfo}>
           <div className={styles.infoSentence}>
             <span className={styles.companyName}>{company}</span>

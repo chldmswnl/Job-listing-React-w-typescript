@@ -1,7 +1,49 @@
+@media (min-width: 660px) and (max-width: 1100px) {
+  .wrappedJobDiv {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .companyDiv {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid grey;
+    border-width: 90%;
+  }
+  .companyDiv,
+  .keywordDiv {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 659px) {
+  .logoImg {
+    width: 20px;
+    height: 20px;
+    transform: translate(40px, -50px) scale(400%);
+  }
+  .wrappedJobDiv {
+    flex-direction: column;
+  }
+  .companyDiv {
+    width: 90%;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #b8b8b8;
+    border-width: 100%;
+  }
+  .companyDiv {
+    margin-bottom: 2rem;
+  }
+
+  .keyword {
+    margin-bottom: 1rem;
+    font-size: 0.5rem;
+  }
+}
+
 .wrappedJobDiv {
-  width: 70vw;
-  height: 130px;
   border: none;
+  width: 70vw;
   border-radius: 5px;
   box-shadow: 1px 1px 20px 1px #cccfcd;
   background-color: white;
@@ -10,6 +52,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+.keywordDiv {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .companyDiv {
@@ -66,6 +113,7 @@
   font-size: 0.8rem;
   margin-left: 1rem;
   padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .middleDot {
