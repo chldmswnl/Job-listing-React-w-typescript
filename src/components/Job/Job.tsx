@@ -1,23 +1,9 @@
 import React from "react";
+import { JobItem } from "../JobList/JobList";
 import styles from "./Job.module.css";
 
 type JobProps = {
-  item: {
-    company: string;
-    contract: string;
-    featured: boolean;
-    id: number;
-    languages: [];
-    level: string;
-    location: string;
-    logo: string;
-    isNew: boolean;
-    position: string;
-    postedAt: string;
-    role: string;
-    tools: [];
-    keywordList: [];
-  };
+  item: JobItem;
 };
 
 function Job({
@@ -34,9 +20,9 @@ function Job({
     postedAt,
     role,
     tools,
-    keywordList,
   },
 }: JobProps) {
+  const keywordList = [role, level, ...languages, ...tools];
   return (
     <div className={styles.wrappedJobDiv}>
       <div className={styles.companyDiv}>

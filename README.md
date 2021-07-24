@@ -6,4 +6,4 @@
 - Redux-toolkit
 - Typeahead library for search box
 
-#### It's responsive website ✔
+#### It's a responsive website ✔
